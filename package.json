@@ -67,6 +67,7 @@
     "jquery": "^2.2.1",
     "normalize.css": "^3.0.3",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "react-router": "^2.0.0"
   }
 }
