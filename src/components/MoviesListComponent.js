@@ -39,32 +39,29 @@ class MoviesListComponent extends React.Component {
 
   }
 
-
-
-
-
-
-
-
-  render() {
+render() {
     return (
       <div className='index'>
 
-<h1> List of the best movies</h1>
+        <h1> List of the best movies</h1>
         {this.state.dump.map(function(trailer){
           return(
 
 
-          <div key={trailer.idIMDB}><p>{trailer.title}</p></div>
+            <div key={trailer.idIMDB}>
+              <p>
+                {trailer.title}
+              </p>
+            </div>
 
 
-        );
-      })}
+          );
+        })}
 
 
-    </div>
-  );
-}
+      </div>
+    );
+  }
 }
 //db30f2b3-b033-4b77-97a1-3cd0988c10f0
 
