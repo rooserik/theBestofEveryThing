@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-require('styles//Header.scss');
+require('styles/Header.scss');
 
 class HeaderComponent extends React.Component {
   render() {

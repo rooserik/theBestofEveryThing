@@ -18,12 +18,12 @@ class MoviesListComponent extends React.Component {
   loadData(){
 
     let component = this;
-    $.getJSON('http://www.myapifilms.com/imdb/search?yearStart=2016&token=db30f2b3-b033-4b77-97a1-3cd0988c10f0&format=json&filter=num_votes&order=desc&titleType=feature&genres=',
+    $.getJSON('http://api.themoviedb.org/3/movie/top_rated?api_key=455bb69c9403cef5e4cee26bf3c0b505',
 
     function(response){
 
       component.setState({
-        dump: response.data.movies
+        dump: response.results
 
       });
 
@@ -46,28 +46,25 @@ class MoviesListComponent extends React.Component {
 
         <h1> List of the best movies</h1>
         {this.state.dump.map(function(movie){
-          //   let starStyle = {
-          //   width: `${movie.rating * 10.0}%`
-          // };
+            let starStyle = {
+            width: `${movie.vote_average * 10.0}%`
+          };
+          let imageUrl = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`;
           return(
 
 
-            <div key={movie.idIMDB}>
+            <div key={movie.id}>
+
               <span>
-                {movie.ranking}
-              </span>
-              <span>
-                <img src={movie.urlPoster} />
+                <img src={imageUrl} />
               </span>
               <span>
                 <h2>
                   {movie.title}
                 </h2>
               </span>
-              <h3>
-                {movie.rating}
-              </h3>
-              {/*<div className="star"><span style={starStyle} className="rating"></span></div>*/}
+
+            <div className="star"><span style={starStyle} className="rating"></span></div>
             </div>
 
 
@@ -79,7 +76,7 @@ class MoviesListComponent extends React.Component {
     );
   }
 }
-//db30f2b3-b033-4b77-97a1-3cd0988c10f0
+//455bb69c9403cef5e4cee26bf3c0b505
 
 
 MoviesListComponent.displayName = 'MoviesListComponent';
