@@ -1,12 +1,12 @@
-require('normalize.css');
-require('styles/App.scss');
-import $ from 'jquery';
+'use strict';
 
 import React from 'react';
+import $ from 'jquery';
 
-//let yeomanImage = require('../images/yeoman.png');
 
-class AppComponent extends React.Component {
+require('styles/MoviesList.scss');
+
+class MoviesListComponent extends React.Component {
   constructor(){
     super();
 
@@ -69,4 +69,10 @@ class AppComponent extends React.Component {
 //db30f2b3-b033-4b77-97a1-3cd0988c10f0
 
 
-export default AppComponent;
+MoviesListComponent.displayName = 'MoviesListComponent';
+
+// Uncomment properties you need
+// MoviesListComponent.propTypes = {};
+// MoviesListComponent.defaultProps = {};
+
+export default MoviesListComponent;
