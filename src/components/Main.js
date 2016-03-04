@@ -1,7 +1,7 @@
 require('normalize.css');
 require('styles/App.scss');
 import React from 'react';
-import TrailersListComponent from './TrailersListComponent';
+import MoviesListComponent from './MoviesListComponent';
 import HeaderComponent from './HeaderComponent';
 
 
@@ -17,7 +17,7 @@ class AppComponent extends React.Component {
     return (
       <div className='index'>
           <HeaderComponent />
-          <TrailersListComponent />
+          <MoviesListComponent />
       </div>
     );
   }
