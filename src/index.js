@@ -12,7 +12,7 @@ import MoviesListComponent from './components/MoviesListComponent';
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path='/' component={AppComponent}>
-      <IndexRoute component={AppComponent} />
+      {/*<IndexRoute component={AppComponent} />*/}
       <Route path='/movies' component={MoviesListComponent}/>
     </Route>
   </Router>
