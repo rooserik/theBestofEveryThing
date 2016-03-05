@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 //IndexRouteLink
 import MoviesListComponent from './components/MoviesListComponent';
 import MusicListComponent from './components/MusicListComponent';
+import TwitterListComponent from './components/TwitterListComponent';
 
 
 // Render the main component into the dom
@@ -18,7 +19,7 @@ ReactDOM.render((
       {/*<IndexRoute component={AppComponent} />*/}
       <Route path='/movies' component={MoviesListComponent}/>
       <Route path='/music' component={MusicListComponent}/>
-
+      <Route path='/twitter' component={TwitterListComponent}/>
     </Route>
   </Router>
 ), document.getElementById('app'));
