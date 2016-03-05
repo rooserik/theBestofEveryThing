@@ -19,6 +19,7 @@ class AppComponent extends React.Component {
       <div className='index'>
         <HeaderComponent />
         <Link to='/movies'>The Best Movies</Link>
+        <Link to='/music'>The Best Music</Link>
           {/*<MoviesListComponent />*/}
           {this.props.children}
       </div>

@@ -63,6 +63,7 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
+    "browsify": "0.0.4",
     "core-js": "^2.0.0",
     "jquery": "^2.2.1",
     "normalize.css": "^3.0.3",
