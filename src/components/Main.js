@@ -20,6 +20,7 @@ class AppComponent extends React.Component {
         <HeaderComponent />
         <Link to='/movies'>The Best Movies</Link>
         <Link to='/music'>The Best Music</Link>
+        <Link to='/twitter'>The Best Tweets</Link>
           {/*<MoviesListComponent />*/}
           {this.props.children}
       </div>
